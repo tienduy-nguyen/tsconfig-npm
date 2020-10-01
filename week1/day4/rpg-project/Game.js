@@ -27,7 +27,7 @@ class Game {
   }
 
   startGame() {
-    for (let i = 0; i < 10; i++) {
+    for (let i = 1; i <= 11; i++) {
       if (this.isEndGame()) {
         return;
       }
@@ -36,7 +36,6 @@ class Game {
   }
 
   updatePlayers() {
-    this.__checkGame();
     if (this.isEndGame()) return;
     this.players = this.players.filter((x) => x.hp > 0);
   }
@@ -54,6 +53,7 @@ class Game {
   }
   //Private methods
   __checkGame() {
+    this.updatePlayers();
     if (this.turnLeft < 1 || this.players.length < 2) {
       const winner = getPlayerMaxHp(this.players);
       this.status = 'endGame';
@@ -67,10 +67,9 @@ class Game {
 
   //Each round of game
   __startTurn(num, players = this.players) {
+    this.updatePlayers();
     this.__checkGame();
     if (this.isEndGame()) return;
-    this.updatePlayers();
-    this.skipTurn();
     console.log(`It's turn ${num}`);
     let newOrders = shuffleArray(players);
     for (let i = 0; i < newOrders.length; i++) {
@@ -81,6 +80,7 @@ class Game {
     }
 
     this.watchStats();
+    this.skipTurn();
     console.log('------------');
   }
 
@@ -89,12 +89,23 @@ class Game {
     const specialKillChances = [true, false, true, false, false, false];
     let isSpecialSkill = getRandom(specialKillChances);
     console.log(`It's time to ${attacker.name} play`);
-    const attackDmg = attacker.dmg;
-    attacker.dealDamage(enemy, attackDmg);
-    console.log(
-      `${attacker.name} is attacking ${enemy.name}. 
-      He deals him ${attackDmg} damages.`
-    );
+    let attackDmg = 0;
+    if (isSpecialSkill) {
+      attacker.dealSpecialDamage(enemy);
+      attackDmg = attacker.skill.dmg;
+      console.log(
+        `${attacker.name} is attacking ${enemy.name} ********** with special skills **********. 
+        He deals him ${attackDmg} damages.`
+      );
+    } else {
+      attacker.dealDamage(enemy);
+      attackDmg = attacker.dmg;
+      console.log(
+        `${attacker.name} is attacking ${enemy.name}. 
+        He deals him ${attackDmg} damages.`
+      );
+    }
+
     if (enemy.isAlive()) {
       console.log(`      ${enemy.name} got ${attackDmg} left.`);
     } else {

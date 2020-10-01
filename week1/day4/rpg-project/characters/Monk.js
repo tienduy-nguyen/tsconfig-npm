@@ -1,4 +1,5 @@
 const Character = require('./Character');
+const Heal = require('../skills/Heal');
 
 class Monk extends Character {
   constructor(
@@ -9,9 +10,11 @@ class Monk extends Character {
     dmgCounter = 0,
     character = 'Monk',
     status = 'playing',
-    id
+    id,
+    skill = new Heal()
   ) {
     super(name, hp, dmg, mana, character, status, dmgCounter, id);
+    this.skill = skill;
   }
 }
 

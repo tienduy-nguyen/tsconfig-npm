@@ -9,7 +9,8 @@ class Character {
     character,
     dmgCounter = 0,
     status = 'playing',
-    id = ''
+    id = '',
+    skill
   ) {
     this.name = name;
     this.hp = hp;
@@ -19,13 +20,34 @@ class Character {
     this.dmgCounter = dmgCounter;
     this.status = status;
     this.id = crypto.randomBytes(16).toString('hex');
+    this.skill = skill;
   }
   takeDamage(dmg) {
     this.hp = this.hp - dmg;
     this.checkStatus();
   }
-  dealDamage(victim, dmg) {
-    victim.takeDamage(dmg);
+  dealDamage(victim) {
+    victim.takeDamage(this.dmg);
+    if (victim.status === 'loser') {
+      this.hp += 20;
+    }
+  }
+  dealSpecialDamage(victim) {
+    if (this.mana < this.skill.mana) {
+      console.log(
+        'Mana not enough to take a special skill. Force attack with normal skill.'
+      );
+      victim.takeDamage(this.dmg);
+      if (victim.status === 'loser') {
+        this.hp += 20;
+      }
+      return;
+    }
+    this.mana -= this.skill.mana;
+    this.hp += this.skill.pvPlus;
+    this.dmg += this.skill.dmgBonus;
+    this.skill.dmg += this.skill.dmgBonus;
+    victim.takeDamage(this.skill.dmg);
     if (victim.status === 'loser') {
       this.hp += 20;
     }

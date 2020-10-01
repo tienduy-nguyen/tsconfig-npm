@@ -1,4 +1,5 @@
 const Character = require('./Character');
+const Rage = require('../skills/Rage');
 
 class Berzerker extends Character {
   constructor(
@@ -9,9 +10,11 @@ class Berzerker extends Character {
     character = 'Berserker',
     dmgCounter = 0,
     status = 'playing',
-    id
+    id,
+    skill = new Rage()
   ) {
     super(name, hp, dmg, mana, character, dmgCounter, status, id);
+    this.skill = skill;
   }
 }
 

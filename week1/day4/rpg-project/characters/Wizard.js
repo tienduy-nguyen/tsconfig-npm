@@ -1,4 +1,5 @@
 const Character = require('./Character');
+const Fireball = require('../skills/Fireball');
 
 class Wizard extends Character {
   constructor(
@@ -9,9 +10,11 @@ class Wizard extends Character {
     character = 'Wizard',
     dmgCounter = 0,
     status = 'playing',
-    id
+    id,
+    skill = new Fireball()
   ) {
     super(name, hp, dmg, mana, character, dmgCounter, status, id);
+    this.skill = skill;
   }
 }
 

@@ -1,6 +1,6 @@
 const getPlayerMaxHp = (players) => {
   if (!players) return;
-  let max = players[0].hp;
+  let max = 0;
   let result = players[0];
 
   players.forEach((x) => {

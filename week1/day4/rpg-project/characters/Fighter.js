@@ -1,5 +1,5 @@
 const Character = require('./Character');
-
+const DarkVision = require('../skills/DarkVision');
 class Fighter extends Character {
   constructor(
     name,
@@ -9,9 +9,11 @@ class Fighter extends Character {
     dmgCounter = 0,
     character = 'Fighter',
     status = 'playing',
-    id
+    id,
+    skill = new DarkVision()
   ) {
     super(name, hp, dmg, mana, character, dmgCounter, status, id);
+    this.skill = skill;
   }
 }
 
