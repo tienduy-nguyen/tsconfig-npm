@@ -17,9 +17,9 @@ It the time we can learn about the serve-side of javascript with NodeJS.
 Don't limit yourselves and depend only on your client-side (browser) when you work with javascript.
 
 ```
-If you want to run this program on local, make sure you have NodeJS installed on your machine. I use NodeJS v12.18.3.
+If you want to run this program on local, make sure you have `NodeJS` installed on your machine. I use `NodeJS v12.18.3.`
 
-If you currious about or you want to install NodeJs, check out the article: [how to install nodejs](https://nodejs.org/en/download/package-manager/)
+Are you already currious about `NodeJS` and want to install it, check out the article: [how to install nodejs](https://nodejs.org/en/download/package-manager/)
 
 
 ```
