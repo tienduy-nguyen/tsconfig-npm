@@ -19,7 +19,7 @@ Don't limit yourselves and depend only on your client-side (browser) when you wo
 ```
 If you want to run this program on local, make sure you have NodeJS installed on your machine. I use NodeJS v12.18.3.
 
-Check [how to install nodejs](https://nodejs.org/en/download/package-manager/)
+If you currious about or you want to install NodeJs, check out the article: [how to install nodejs](https://nodejs.org/en/download/package-manager/)
 
 
 ```
