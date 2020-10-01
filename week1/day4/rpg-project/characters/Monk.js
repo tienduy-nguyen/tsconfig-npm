@@ -1,8 +1,17 @@
 const Character = require('./Character');
 
 class Monk extends Character {
-  constructor(hp = 8, dmg = 2, mana = 200, dmgCounter = 0) {
-    super(hp, dmg, mana, dmgCounter);
+  constructor(
+    name,
+    hp = 8,
+    dmg = 2,
+    mana = 200,
+    dmgCounter = 0,
+    character = 'Monk',
+    status = 'playing',
+    id
+  ) {
+    super(name, hp, dmg, mana, character, status, dmgCounter, id);
   }
 }
 

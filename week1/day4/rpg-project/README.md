@@ -8,9 +8,15 @@ Each character will have its own characteristics.
 
 Each turn, for each character, you will choose who will attack. The character will the most health points at the end of 10 turns wins the game.
 
+
 ```
-I want to this program run and display only in the console, not in the browser. so, I used NodeJS to do that. If you want to run the programe on local, make sure you have NodeJS installed on your machine. I use NodeJS v12.18.3.
+I prefer this program run and display on the console of terminal, not on the console of the browser. So, I used NodeJS to do that. 
+
+It the time we can learn about the serve-side of javascript with NodeJS. Don't limit yourselves and depend only on your client-side (browser) when you work with javascript.
+
 ```
+If you want to run this program on local, make sure you have NodeJS installed on your machine. I use NodeJS v12.18.3.
+
 Check [how to install nodejs](https://nodejs.org/en/download/package-manager/)
 
   

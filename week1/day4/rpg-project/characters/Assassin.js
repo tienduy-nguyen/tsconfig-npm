@@ -1,8 +1,17 @@
 const Character = require('./Character');
 
 class Assassin extends Character {
-  constructor(hp = 6, dmg = 6, mana = 20, dmgCounter = 0) {
-    super(hp, dmg, mana, dmgCounter);
+  constructor(
+    name,
+    hp = 6,
+    dmg = 6,
+    mana = 20,
+    character = 'Assassin',
+    dmgCounter = 0,
+    status = 'playing',
+    id
+  ) {
+    super(name, hp, dmg, mana, character, dmgCounter, status, id);
   }
 }
 

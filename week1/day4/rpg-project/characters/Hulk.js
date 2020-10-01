@@ -1,12 +1,12 @@
 const Character = require('./Character');
 
-class Paladin extends Character {
+class Hulk extends Character {
   constructor(
     name,
-    hp = 16,
-    dmg = 3,
-    mana = 160,
-    character = 'Paladin',
+    hp = 20,
+    dmg = 2,
+    mana = 100,
+    character = 'Hulk',
     dmgCounter = 0,
     status = 'playing',
     id
@@ -15,4 +15,4 @@ class Paladin extends Character {
   }
 }
 
-module.exports = Paladin;
+module.exports = Hulk;

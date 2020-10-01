@@ -3,15 +3,19 @@ const Paladin = require('./characters/Paladin');
 const Monk = require('./characters/Monk');
 const Berzerker = require('./characters/Berzerker');
 const Assassin = require('./characters/Assassin');
+const Game = require('./Game');
 
-const Grace = new Fighter();
-const Ulder = new Paladin();
-const Moanna = new Monk();
-const Draven = new Berzerker();
-const Carl = new Assassin();
+const Grace = new Fighter('Grace');
+const Ulder = new Paladin('Ulder');
+const Moanna = new Monk('Moanna');
+const Draven = new Berzerker('Draven');
+const Carl = new Assassin('Carl');
 
-console.log(Grace);
-console.log(Ulder);
-console.log(Moanna);
-console.log(Draven);
-console.log(Carl);
+console.log('************************************');
+console.log('Welcome to RPG game');
+console.log('************************************');
+
+let players = [Grace, Ulder, Moanna, Draven, Carl];
+
+const rpgGame = new Game(players);
+rpgGame.startGame();
