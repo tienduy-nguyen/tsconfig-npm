@@ -1,14 +1,14 @@
 {
-  "name": "try-publish-npm",
-  "description": "Quickly create an opinionated tsconfig.json of Ben Award",
+  "name": "td-tsconfig",
+  "description": "Quickly create an opinionated tsconfig.json",
   "version": "1.0.0",
   "main": "src/index.js",
   "bin": "src/index.js",
-  "repository": "https://github.com/tienduy-nguyen/thp-next.git",
+  "repository": "https://github.com/tienduy-nguyen/try-publish-npm.git",
   "bugs": {
-    "url": "https://github.com/tienduy-nguyen/thp-next/issues"
+    "url": "https://github.com/tienduy-nguyen/try-publish-npm/issues"
   },
-  "homepage": "https://github.com/tienduy-nguyen/thp-next#readme",
+  "homepage": "https://github.com/tienduy-nguyen/try-publish-npm#readme",
   "author": "Ben Awad",
   "license": "MIT",
   "scripts": {
