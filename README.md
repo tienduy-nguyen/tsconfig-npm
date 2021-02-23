@@ -4,18 +4,18 @@ Create `tsconfig.json`:
 
 [Youtube Ben Award tuto](https://www.youtube.com/watch?v=Ufwbp838yZA)
 
-Npm package name: `ts-tsconfig`:
+Npm package name: `td-tsconfig`:
 
 - Install package
   ```bash
-  $ yarn add ts-tsconfig
+  $ yarn add td-tsconfig
   # or with npm
-  $ npm i ts-tsconfig
+  $ npm i td-tsconfig
   ```
 
 - Command:
   ```bash
   $ yarn td-tsconfig
   # or with npx
-  $ npx ts-tsconfig
+  $ npx td-tsconfig
   ```
