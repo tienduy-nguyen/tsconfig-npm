@@ -21,8 +21,8 @@ async function main() {
       choices: Object.keys(configFiles),
     },
   ]);
+
   let config = await readFile(configFiles[framework]).catch(console.log);
-  console.log(JSON.parse(config.toString()));
 
   const tsconfig = path.join(process.cwd(), 'tsconfig.json');
 
