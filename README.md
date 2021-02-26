@@ -3,18 +3,18 @@
 I learned how to  publish npm with [Ben Award tuto](https://www.youtube.com/watch?v=Ufwbp838yZA) - create `tsconfig.json`:
 
 
-Npm package name: `ts-tsconfig`:
+Npm package name: `td-tsconfig`:
 
 - Install package
   ```bash
-  $ yarn add ts-tsconfig
+  $ yarn add td-tsconfig
   # or with npm
-  $ npm i ts-tsconfig
+  $ npm i td-tsconfig
   ```
 - Command:
   ```bash
   $ yarn td-tsconfig
   # or with npx
-  $ npx ts-tsconfig
+  $ npx td-tsconfig
   ```
-- And pick your framework
+- And pick your framework you need
