@@ -3,7 +3,6 @@
     "target": "esNext",
     "module": "commonjs",
     "pretty": true,
-    "sourceMap": true,
     "importHelpers": true,
     "strict": true,
     "noImplicitAny": false,
@@ -32,6 +31,5 @@
       "@modules/*": ["src/modules/*"],
     }
   },
-  "exclude": ["node_modules"],
-  "include": ["./src/**/*.tsx", "./src/**/*.ts"]
+  "include": ["src"]
 }

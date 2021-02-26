@@ -1,8 +1,7 @@
-# Try publish package to npm
+# Scaffold quickly tsconfig.json
 
-Create `tsconfig.json`:
+I learned how to  publish npm with [Ben Award tuto](https://www.youtube.com/watch?v=Ufwbp838yZA) - create `tsconfig.json`:
 
-[Youtube Ben Award tuto](https://www.youtube.com/watch?v=Ufwbp838yZA)
 
 Npm package name: `ts-tsconfig`:
 
@@ -12,10 +11,10 @@ Npm package name: `ts-tsconfig`:
   # or with npm
   $ npm i ts-tsconfig
   ```
-
 - Command:
   ```bash
   $ yarn td-tsconfig
   # or with npx
   $ npx ts-tsconfig
   ```
+- And pick your framework
