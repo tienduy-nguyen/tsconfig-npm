@@ -1,7 +1,11 @@
 # Scaffold quickly tsconfig.json
 
-I learned how to  publish npm with [Ben Award tuto](https://www.youtube.com/watch?v=Ufwbp838yZA) - create `tsconfig.json`:
+When I search on Youtube how to create & publish an npm package. 
+I found an awesome tutorial of [Ben Award](https://www.youtube.com/watch?v=Ufwbp838yZA) - create `tsconfig.json` package.
 
+So I try it and make my custom `tsconfig.json`.
+
+## Usage
 
 Npm package name: `td-tsconfig`:
 
@@ -18,3 +22,38 @@ Npm package name: `td-tsconfig`:
   $ npx td-tsconfig
   ```
 - And pick your framework you need
+  There are 4 frameworks:
+  - node
+  - react
+  - nextjs
+  - vitejs-react
+
+## Some notices
+
+- **Note**: a notice when to use `absolute path` in ViteJS with React
+
+eg:
+```ts
+import {Navbar} from 'src/components/Navbar.tsx' // --> is absolute path with baseUrl= "./"
+```
+
+To make sure it works, we need customize `alias` in `vite.config.ts` 
+
+
+```ts
+// vite.config.js
+import { defineConfig } from 'vite';
+import reactRefresh from '@vitejs/plugin-react-refresh';
+import { resolve } from 'path';
+
+export default defineConfig({
+  plugins: [reactRefresh()],
+  resolve: {
+    alias: {
+      src: resolve(__dirname, 'src'),
+    },
+  },
+});
+
+```
+To use `import { resolve } from 'path';`, you need installed package `@types/node`.
