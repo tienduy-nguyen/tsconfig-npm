@@ -1,8 +1,13 @@
 {
   "compilerOptions": {
     "target": "esNext",
+    "typeRoots": ["./node_modules/@types", "src/@types"],
+    "types": ["jest", "node"],
     "module": "commonjs",
-    "pretty": true,
+    "declaration": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "incremental": true,
     "importHelpers": true,
     "strict": true,
     "noImplicitAny": false,
@@ -20,15 +25,13 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "declaration": true,
-    "removeComments": true,
     "outDir": "./dist",
-    "incremental": true,
     "allowJs": true,
     "noEmit": false,
+
     "baseUrl": ".",
     "paths": {
-      "@modules/*": ["src/modules/*"],
+      "@modules/*": ["src/modules/*"]
     }
   },
   "include": ["src"]

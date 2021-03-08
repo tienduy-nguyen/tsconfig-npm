@@ -3,6 +3,7 @@ tests
 sample
 package-lock.json
 yarn.lock
+yarn*
 tsconfig.json
 .prettierrc
 docs
@@ -18,4 +19,4 @@ renovate.json
 .prettierrc
 .github
 publish.sh
-yarn-error.log
+node_modules
