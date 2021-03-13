@@ -1,16 +1,16 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "target": "esnext",
+    "lib": ["DOM", "DOM.Iterable", "esnext"],
     "typeRoots": ["./node_modules/@types", "src/@types"],
-    "types": ["vite/client", "cypress", "node"],
+    "types": ["vite/client", "jest", "node"],
     "allowJs": true,
     "skipLibCheck": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
+    "module": "esnext",
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -20,6 +20,6 @@
     "baseUrl": "./",
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["./src", "cypress"],
-  "exclude": ["__mocks__"]
+  "include": ["./src", "vite.config.ts"],
+  "exclude": ["__mocks__", "__test__"]
 }

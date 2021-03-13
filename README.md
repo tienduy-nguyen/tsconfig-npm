@@ -57,3 +57,21 @@ export default defineConfig({
 
 ```
 To use `import { resolve } from 'path';`, you need installed package `@types/node`.
+
+- **Note**: If we use jest & cypress for Testing in same React project, we need have two different files `tsconfig.json`: one in root dir for `src` project and another in `cypress folder` to avoid conflict **types** between 2 this packages. Check my project [Bookstore](https://github.com/tienduy-nguyen/bookstore.git) to see how config.
+
+  Example of `tsconfig.json` for cypress in React: 
+  ```json
+  {
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+      "noEmit": true,
+      // be explicit about types included
+      // to avoid clashing with Jest types
+      "types": ["cypress"]
+    },
+    "include": ["../node_modules/cypress", "./*/*.ts"]
+  }
+
+
+  ```
