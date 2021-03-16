@@ -3,7 +3,7 @@
 When I search on Youtube how to create & publish an npm package. 
 I found an awesome tutorial of [Ben Award](https://www.youtube.com/watch?v=Ufwbp838yZA) - create `tsconfig.json` package.
 
-So I try it and make my custom `tsconfig.json`.
+So I try it immediately and make my custom `tsconfig.json`.
 
 ## Usage
 
@@ -27,6 +27,7 @@ Npm package name: `td-tsconfig`:
   - react
   - nextjs
   - vitejs-react
+  - cypress (tsconfig extends)
 
 ## Some notices
 
@@ -61,13 +62,14 @@ To use `import { resolve } from 'path';`, you need installed package `@types/nod
 - **Note**: If we use jest & cypress for Testing in same React project, we need have two different files `tsconfig.json`: one in root dir for `src` project and another in `cypress folder` to avoid conflict **types** between 2 this packages. Check my project [Bookstore](https://github.com/tienduy-nguyen/bookstore.git) to see how config.
 
   Example of `tsconfig.json` for cypress in React: 
+
+
+  // to avoid clashing with Jest types
   ```json
   {
     "extends": "../tsconfig.json",
     "compilerOptions": {
       "noEmit": true,
-      // be explicit about types included
-      // to avoid clashing with Jest types
       "types": ["cypress"]
     },
     "include": ["../node_modules/cypress", "./*/*.ts"]
@@ -75,3 +77,12 @@ To use `import { resolve } from 'path';`, you need installed package `@types/nod
 
 
   ```
+
+
+## Project references:
+See more my implementation `tsconfig.json` in some projects:
+
+- NestJS-React-ViteJS: [Bookstore](https://github.com/tienduy-nguyen/bookstore)
+- NodeJS-NextJS: [Reddit-GraphQL](https://gitlab.com/tienduy-nguyen/reddit-graphql)
+- Only NestJS: [NestJS-Prisma-GraphQL](https://github.com/tienduy-nguyen/nestjs-graphql-prisma)
+- Only React: [React-TypeScript-Antd](https://github.com/tienduy-nguyen/react-typescript-example)
