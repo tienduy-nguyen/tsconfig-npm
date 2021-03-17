@@ -9,11 +9,11 @@ So I try it immediately and make my custom `tsconfig.json`.
 
 Npm package name: `td-tsconfig`:
 
-- Install package
+- Install package in dev-dependencies
   ```bash
-  $ yarn add td-tsconfig
+  $ yarn add -D td-tsconfig
   # or with npm
-  $ npm i td-tsconfig
+  $ npm i --save-dev td-tsconfig
   ```
 - Command:
   ```bash
@@ -23,12 +23,27 @@ Npm package name: `td-tsconfig`:
   ```
 - And pick your framework you need
   There are 4 frameworks:
-  - node
-  - react
-  - nextjs
-  - vitejs-react
+  - **node**
+  - **react**
+  - **nextjs**
+  - **vitejs-react**
   - cypress (tsconfig extends)
+- After running commands above, an `tsconfig.json` file will be created directly on your root folder.
+- So all the things are done, now  may be you don't need keep package `td-tsconfig` in your project any more, and you and remove it.
+  ```bash
+  $ yarn remove td-tsconfig
+  # or 
+  $ npm uninstall td-tsconfig
+  ```
+- **Hint**: maybe you can install globally this package and then you can use for all your projects.
+  
+  ```bash
+  $ yarn global add td-tsconfig
+  # or
+  $ npm i -g td-tsconfig
+  ```
 
+  DONE!
 ## Some notices
 
 - **Note**: a notice when to use `absolute path` in ViteJS with React
