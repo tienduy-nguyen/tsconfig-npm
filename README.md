@@ -15,7 +15,7 @@ Npm package name: `td-tsconfig`:
   # or with npm
   $ npm i --save-dev td-tsconfig
   ```
-- Command:
+- Command to create `tsconfig.json` file:
   ```bash
   $ yarn td-tsconfig
   # or with npx
