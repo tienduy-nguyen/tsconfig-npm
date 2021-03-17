@@ -1,7 +1,7 @@
 # Scaffold quickly tsconfig.json
 
 When I search on Youtube how to create & publish an npm package. 
-I found an awesome tutorial of [Ben Award](https://www.youtube.com/watch?v=Ufwbp838yZA) - create `tsconfig.json` package.
+I found an awesome tutorial of [Ben Award](https://www.youtube.com/watch?v=Ufwbp838yZA) - create `tsconfig.json` package. Thanks Ben!.
 
 So I try it immediately and make my custom `tsconfig.json`.
 
