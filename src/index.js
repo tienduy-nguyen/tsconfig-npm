@@ -23,7 +23,12 @@ async function main() {
   ]);
 
   let config = await readFile(configFiles[framework]).catch(console.log);
-  const tsconfig = path.join(process.cwd(), 'tsconfig.json');
+  let tsconfig = path.join(process.cwd(), 'tsconfig.json');
+
+  // Create separate file if is tsconfig.json extended for cypress folder
+  if (framework === 'cypress')
+    tsconfig = path.join(process.cwd(), 'tsconfig.cypress.json');
+
   await writeFile(tsconfig, config.toString());
   console.log('tsconfig.json successfully created');
 }
