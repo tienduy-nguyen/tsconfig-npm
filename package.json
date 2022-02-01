@@ -1,14 +1,14 @@
 {
   "name": "td-tsconfig",
   "description": "Quickly create an opinionated tsconfig.json",
-  "version": "1.0.15",
+  "version": "v1.1.1",
   "main": "src/index.js",
   "bin": "src/index.js",
-  "repository": "https://github.com/tienduy-nguyen/try-publish-npm.git",
+  "repository": "https://github.com/tienduy-nguyen/tsconfig-npm.git",
   "bugs": {
-    "url": "https://github.com/tienduy-nguyen/try-publish-npm/issues"
+    "url": "https://github.com/tienduy-nguyen/tsconfig-npm/issues"
   },
-  "homepage": "https://github.com/tienduy-nguyen/try-publish-npm#readme",
+  "homepage": "https://github.com/tienduy-nguyen/tsconfig-npm#readme",
   "author": "Tien Duy",
   "license": "MIT",
   "scripts": {
@@ -19,9 +19,18 @@
     "tsconfig.json",
     "typescript",
     "ts",
-    "react", "vitejs", "nextjs", "nodejs"
+    "react",
+    "vitejs",
+    "nextjs",
+    "nodejs"
   ],
   "dependencies": {
     "inquirer": "^8.0.0"
-  }
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^16.0.0",
+    "conventional-changelog": "^3.1.25",
+    "conventional-changelog-cli": "^2.2.2"
+  },
+  "packageManager": "yarn@3.1.1"
 }
