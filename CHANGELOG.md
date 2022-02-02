@@ -1,3 +1,9 @@
+## <small>1.1.3 (2022-02-02)</small>
+
+* feat(node): use minimal config for node ([0700038](https://github.com/tienduy-nguyen/tsconfig-npm/commit/0700038))
+
+
+
 ## <small>1.1.2 (2022-02-01)</small>
 
 * ci: add auto release ([5224cff](https://github.com/tienduy-nguyen/tsconfig-npm/commit/5224cff))
@@ -48,7 +54,3 @@
 * Update simple version attack ([8ea5f59](https://github.com/tienduy-nguyen/tsconfig-npm/commit/8ea5f59))
 * Using npm ([ba0d7d6](https://github.com/tienduy-nguyen/tsconfig-npm/commit/ba0d7d6))
 * Webpack basics ([49f6f8c](https://github.com/tienduy-nguyen/tsconfig-npm/commit/49f6f8c))
-
-
-
-
