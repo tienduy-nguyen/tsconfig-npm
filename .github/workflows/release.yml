@@ -4,7 +4,7 @@ on:
     inputs:
       strategy:
         description: Valid semver number <x.x.x> or strategy <patch, minor, major>
-        default: "patch"
+        default: "*"
         required: false
 
 jobs:
